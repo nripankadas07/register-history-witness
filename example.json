@@ -1,0 +1,21 @@
+{
+  "initial": 0,
+  "operations": [
+    {
+      "id": "write1",
+      "client": "a",
+      "kind": "write",
+      "start": 0,
+      "end": 10,
+      "value": 1
+    },
+    {
+      "id": "read0",
+      "client": "b",
+      "kind": "read",
+      "start": 1,
+      "end": 2,
+      "value": 0
+    }
+  ]
+}

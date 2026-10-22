@@ -1,0 +1,38 @@
+{
+  "repo": "register-history-witness",
+  "user": "Distributed-systems developers examining a tiny completed register trace.",
+  "pain": "A stale read may be legal during an overlapping write; sorting completion times alone gives the wrong explanation.",
+  "capability": "Find a real-time-respecting read/write/CAS register linearization or exhaust a bounded search with an explicit UNKNOWN budget state.",
+  "alternatives": [
+    "anishathalye/porcupine",
+    "jepsen-io/knossos",
+    "microsoft/accordant"
+  ],
+  "query": "linearizability sort:stars-desc",
+  "distinct": "Clock quorum and event-time tools inspect clocks or stream windows; this checks concurrent operation semantics against one register specification.",
+  "limits": "At most16 complete operations on one register. Unique operation IDs, per-client nonoverlapping half-open integer intervals [start,end); end<=next start imposes precedence. Reads return value, writes are successful, CAS has expect/update/result. Values null, bounded integers or strings<=128; no boolean register values. Search memoizes (completed set,value),<=100000 states (state_limit may lower). UNKNOWN is never NOT_LINEARIZABLE. No pending/failed/timed-out ops, multiple keys, histories collected from live systems, distributed clocks or full Jepsen/Porcupine equivalence. A deepest prefix is diagnostic, not a standalone impossibility proof.",
+  "expected": "An overlapping read of0 linearizes before the write of1 despite the earlier write invocation.",
+  "checks": "18 histories against an independent full permutation oracle, stale reads, overlap, CAS/null, budget UNKNOWN and invalid client histories.",
+  "primary": [
+    "https://github.com/anishathalye/porcupine",
+    "https://github.com/jepsen-io/knossos"
+  ],
+  "topics": [
+    "linearizability",
+    "distributed-systems",
+    "concurrency",
+    "python"
+  ],
+  "occurrence": "GH-20261022",
+  "state": "VALIDATED",
+  "demand": "Inferred workflow need; no verified request for this new product.",
+  "inventory_compared": 213,
+  "acceptance": [
+    "An overlapping read of0 linearizes before the write of1 despite the earlier write invocation.",
+    "18 histories against an independent full permutation oracle, stale reads, overlap, CAS/null, budget UNKNOWN and invalid client histories.",
+    "Clean wheel-installed console outside checkout; meaningful malformed input and source preservation."
+  ],
+  "discovery": "Searchable problem-focused README/topics and runnable invented fixture, no outreach or adoption promise.",
+  "originality": "Original AI-assisted implementation; standard algorithms independently reimplemented, no third-party code/prose copied.",
+  "mutual_distinction": "Numeric constraints, concurrent register semantics, WAV cue references, ASN.1 byte boundaries and raster-mask topology are separate users, inputs and contracts."
+}
