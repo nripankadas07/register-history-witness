@@ -1,0 +1,15 @@
+{
+  "status": "LINEARIZABLE",
+  "linearization": [
+    "read0",
+    "write1"
+  ],
+  "deepest_prefix": [
+    "read0",
+    "write1"
+  ],
+  "explored_states": 3,
+  "state_limit": 100000,
+  "precedence": [],
+  "interpretation": "UNKNOWN is a resource bound, never a failed history. A deepest prefix alone is not a proof of impossibility."
+}

@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "register-history-witness"
+version = "0.1.0"
+description = "Find a real-time-respecting read/write/CAS register linearization or exhaust a bounded search with an explicit UNKNOWN budget state."
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+readme = "README.md"
+dependencies = []
+[project.scripts]
+register-history-witness = "register_history_witness:main"
+[tool.setuptools]
+py-modules = ["register_history_witness"]

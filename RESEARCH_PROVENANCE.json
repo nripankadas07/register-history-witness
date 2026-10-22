@@ -1,0 +1,133 @@
+{
+  "query": {
+    "query": "linearizability sort:stars-desc",
+    "observed": "2026-10-22T06:18:36.315Z",
+    "url": "https://github.com/search?q=linearizability%20sort%3Astars-desc&type=repositories",
+    "results": [
+      "anishathalye/porcupine",
+      "jepsen-io/knossos",
+      "pingcap/chaos",
+      "ease-lab/Hermes",
+      "stevana/property-based-testing-stateful-systems-tutorial",
+      "dj456119/AlfheimDB",
+      "microsoft/accordant",
+      "ahorn/linearizability-checker",
+      "lorin/tla-linearizability",
+      "pramalhe/RedoDB"
+    ],
+    "error": null
+  },
+  "comparables": [
+    {
+      "repo": "anishathalye/porcupine",
+      "url": "https://github.com/anishathalye/porcupine",
+      "stars": 1271,
+      "pushed_at": "2026-09-21T03:23:08Z",
+      "archived": false,
+      "default_branch": "master",
+      "license_metadata": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "observed": "2026-10-22T06:19:50.164Z",
+      "workflow": "Go checker with executable sequential models and history visualization; broader models and algorithms.",
+      "sampled_open_items": [
+        {
+          "number": 46,
+          "title": "Support system-specific consistency models via DAG-based execution",
+          "url": "https://github.com/anishathalye/porcupine/pull/46",
+          "body_excerpt": "This PR generalizes the Wing-Gong linearizability checking algorithm to check for a broader set of non-transactional consistency guarantees that are stronger than sequential consistency, such as ordered sequential consistency and regular sequential consistency. It maintains the operation history as a DAG instead of a doubly linked list, enabling the use of both hard and soft ordering constraints. "
+        },
+        {
+          "number": 36,
+          "title": "Implement a generic wrapper for untyped porcupine module",
+          "url": "https://github.com/anishathalye/porcupine/pull/36",
+          "body_excerpt": "This is just a wrapper over the untyped porcupine package.\r\n\r\nWhile most data structures and functions/methods were exactly the same, the `Event` struct had to be changed a bit to keep it type safe\r\n\r\nThe untyped Event struct:\r\n```\r\ntype Event struct {\r\n\tClientId int // optional, unless you want a visualization; zero-indexed\r\n\tKind     EventKind\r\n\tValue    interface{}\r\n\tId       int\r\n}\r\n``` \r\nThe "
+        },
+        {
+          "number": 35,
+          "title": "Allow the user to choose order heuristics",
+          "url": "https://github.com/anishathalye/porcupine/issues/35",
+          "body_excerpt": "Hi there!\n\nPorcupine is sorting the operations that it gets from the user in [the checker](https://github.com/anishathalye/porcupine/blob/950cd7dbff0f8d6621e8fb15c9684985cf8b629f/checker.go#L129). This is a \"good enough\" heuristic for a lot of use cases or for when the user isn't sure about it.\n\nHowever, I have noticed a significant boost in performance (up to 4 orders of magnitude) when I have a "
+        }
+      ]
+    },
+    {
+      "repo": "jepsen-io/knossos",
+      "url": "https://github.com/jepsen-io/knossos",
+      "stars": 426,
+      "pushed_at": "2026-07-17T20:13:25Z",
+      "archived": false,
+      "default_branch": "master",
+      "license_metadata": null,
+      "observed": "2026-10-22T06:19:50.450Z",
+      "workflow": "Clojure/EDN model and history checking including uncertain operations; README explicitly cautions about algorithm certainty.",
+      "sampled_open_items": [
+        {
+          "number": 32,
+          "title": "Is it possible to test distrubuted file systems like HDFS using the existed models? ",
+          "url": "https://github.com/jepsen-io/knossos/issues/32",
+          "body_excerpt": "Well, I want to test the linearizability of my own distributed file system, which is similar to HDFS. And I have seen there are some useful models already such as cas-register and multi-register, but I don't know how to apply these models to the file systems, which is a little different from a key-value store. For example, in a file system, writing/reading is at a certain offset while the key-valu"
+        },
+        {
+          "number": 27,
+          "title": "Assertion errors from Java ",
+          "url": "https://github.com/jepsen-io/knossos/issues/27",
+          "body_excerpt": "Hi @aphyr - Thank you for the amazing framework you've supplied us with to test out our databases\r\nI have a working repo with Jepsen testing out our Blockchain Go Implementation at Orbs\r\nand have encountered something weird with Knossos verifying history and firing many Java Assertion Errors like the following attached here\r\n\r\nThe weird thing is, the history checks appears to be valid and is quite"
+        },
+        {
+          "number": 25,
+          "title": "knossos.competition checker is blocked by linear/start-analysis",
+          "url": "https://github.com/jepsen-io/knossos/issues/25",
+          "body_excerpt": "As I understand the idea of `knossos.competition` checker is to run `linear` and `wgl` checkers in parallel. But actually `linear/start-analysis` is blocking calling thread on `knossos.model.memo/memo` function call, which seems to be doing almost the whole analysis. As a result `mem-watch` and `reporter` in `knossos.search/run` are also not working, because the `linear/start-analysis` needs to co"
+        }
+      ]
+    },
+    {
+      "repo": "microsoft/accordant",
+      "url": "https://github.com/microsoft/accordant",
+      "stars": 69,
+      "pushed_at": "2026-09-14T19:04:18Z",
+      "archived": false,
+      "default_branch": "main",
+      "license_metadata": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "observed": "2026-10-22T06:19:52.210Z",
+      "workflow": ".NET model-based test generation and executable specifications, NuGet setup and samples.",
+      "sampled_open_items": [
+        {
+          "number": 47,
+          "title": "Making Accordant proactive",
+          "url": "https://github.com/microsoft/accordant/issues/47",
+          "body_excerpt": "Currently, accordant is reactive: An event comes in, a response goes out. Async / future actions cannot send a message. Many systems are proactive, sending messages to other systems on their accord.\n\n# Feature Request\n\nAllowing models to send messages"
+        },
+        {
+          "number": 46,
+          "title": "Extending Accordant with time",
+          "url": "https://github.com/microsoft/accordant/issues/46",
+          "body_excerpt": "AFAIU, Accordant implements an I/O automaton with internal steps.\n\n# Feature request\n\nTimed I/O automata. The shell manages time for me, my model gets a timestamp along with every request and my model can register async / future actions with a timestamp as well to implement timers.\n\n# Note\n\nImportantly, my model (the core of the developer experience) does not have to manage time, that happens in t"
+        },
+        {
+          "number": 45,
+          "title": "Edge tests",
+          "url": "https://github.com/microsoft/accordant/pull/45",
+          "body_excerpt": "## Summary\r\nCloses edge cases across `Choose`, `Spec` binding, response explanation, and `State.Clone`, and adds tests covering them. Builds on #43.\r\n\r\n## Changes\r\n- `Choose.Each`: reject a null or empty value list, and throw a clear error when called outside `ChooseExpressionLambda.Run(...)` instead of failing on a null config.\r\n- `Spec.SetSpec` (reflection binding): throw a descriptive `SpecExce"
+        }
+      ]
+    }
+  ],
+  "highest_star_relevant_found": "anishathalye/porcupine",
+  "primary_sources": [
+    "https://github.com/anishathalye/porcupine",
+    "https://github.com/jepsen-io/knossos"
+  ],
+  "scope": "Scoped live stars-desc GitHub keyword search, supplemented with established relevant alternatives after README/docs/source inspection; not an exhaustive global ranking. No competitor installs, timing, reliability or support response were measured. Sampled open items can include PRs; none is treated as demand for this new tool."
+}
